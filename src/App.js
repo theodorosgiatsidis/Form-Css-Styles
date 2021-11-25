@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Square from "./components/Square";
+import Square2 from "./components/Square2";
+import Square3 from "./components/Square3";
+import Square4 from "./components/Square4";
+import Square5 from "./components/Square5";
+import Square6 from "./components/Square6";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Square />
+      <Square2 />
+      <Square3 />
+      <Square4 />
+      <Square5 />
+      <Square6 />
     </div>
   );
 }
