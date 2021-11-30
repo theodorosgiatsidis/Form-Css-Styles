@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 
-import "./App.css";
-
-function App() {
+function Form() {
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [background, setBackground] = useState("");
   const [items, setItems] = useState([]);
-
   const handleWidthChange = (e) => {
     setWidth(e.target.value);
   };
@@ -26,20 +23,10 @@ function App() {
       ...items,
       { width: width, height: height, background: background },
     ]);
+    console.log(items);
   };
   return (
-    <div className="App">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          style={{
-            width: item.width,
-            height: item.height,
-            backgroundColor: item.background,
-          }}
-        ></div>
-      ))}
-
+    <div>
       <form onSubmit={handleSubmit}>
         <div className="field">
           <label> CSS Test </label>
@@ -65,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default Form;
